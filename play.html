@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+	
+	<link type="text/css" rel="stylesheet" href="css/chess.css" />
+	<link type="text/css" rel="stylesheet" href="skins/gnomechess.css" />
+	<link rel="stylesheet" href="app/stylesheets/Main.css" type="text/css">
+	<link rel="stylesheet" href="app/stylesheets/theme/jquery-ui.min.css" type="text/css">
+	
+	<script type="text/javascript" src="app/javascript/jquery.js"></script>
+	<script type="text/javascript" src="app/javascript/jquery-ui.js"></script>
+	<script type="text/javascript" src="$MANAGER_WIDGET/Common/API/Widget.js"></script>
+	<script type="text/javascript" src="$MANAGER_WIDGET/Common/API/TVKeyValue.js"></script>
+	<script type='text/javascript' language='javascript' src='$MANAGER_WIDGET/Common/API/Plugin.js'></script>
+	
+	<object id="pluginObjectTVMW" border=0 classid="clsid:SAMSUNG-INFOLINK-TVMW" style="visibility:hidden; position:absolute; width: 0; height: 0; opacity: 0;" /></object>
+	<object id="pluginObjectNNavi" border=0 classid="clsid:SAMSUNG-INFOLINK-NNAVI" style="visibility:hidden; position:absolute; width: 0; height: 0; opacity: 0;" /></object>
+	<object id="pluginPlayer" border=0 classid="clsid:SAMSUNG-INFOLINK-PLAYER" style="visibility:hidden; position:absolute; width: 0; height: 0; opacity: 0;"></object>
+	
+	<script type="text/ecmascript" src="common/xhr.js"></script>
+	<script type="text/ecmascript" src="chess.js"></script>
+	<script type="text/javascript" src="app/javascript/script.js"></script>
+	<script type="text/javascript" src="app/javascript/jquery.twinkle.js"></script>
+	<script type="text/javascript" src="app/javascript/key.js"></script>
+	<script type="text/javascript" src="app/javascript/play.js"></script>
+	<script type="text/javascript" src="app/javascript/popup.js"></script>
+	
+
+	<title></title>
+	<style type="text/css">
+	body {
+		background-image: url('img/play.jpg');
+		background-repeat: no-repeat;
+	}
+	.ui-dialog-content {
+		padding: 0px 0px 0px 0px !important;
+		background: url('img/bgwin.png') no-repeat !important;
+	}
+	.winorlose {
+		font-size: 2em;
+		font-weight: bold;
+		position: relative;
+		text-align: center;
+		top: 25px;
+	}
+	#whiteking {
+		position: absolute;
+		right: 80px;
+		top: 110px;
+	}
+	#blackking {
+		left: 85px;
+		position: absolute;
+		top: 110px;
+	}
+
+	</style>
+	
+</head>
+<body onload="Main.onLoad(); initChess();" onunload="Main.onUnload();">
+<a href="javascript:void(0);" id="anchor" onkeydown="Main.keyDown();"></a>
+<img src="img/helpbar1.png" alt="" style="background: url('img/bg.png'); width: 960px; height: 28px; position: absolute; bottom: 0px; left: 0px" />
+<img src="img/12.png" id="whiteking" alt="" />
+<img src="img/18.png" id="blackking" alt="" />
+<img id="popup" alt="Popup" />
+<div id="chessDesk"></div>
+	<object type="application/x-shockwave-flash" data="dewplayer.swf" width="1" height="1" id="dewplayer" name="dewplayer"> 
+		<param name="wmode" value="transparent" />
+		<param name="movie" value="dewplayer.swf" /> 
+		<param name="flashvars" value="mp3=music.mp3&autostart=1&autoreplay=1" />
+	</object>
+</body>
+</html>

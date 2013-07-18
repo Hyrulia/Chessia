@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+	<title>How to play</title>
+	<style type="text/css">
+		body {
+			background-image: url('img/howto.jpg');
+			background-repeat: no-repeat;
+		}
+		ul
+		{
+		    list-style-type: none;
+			float: left;
+			margin-right: 50px;
+		}
+		#global {
+		    margin: 150px auto auto;
+		    width: 90%;
+		}
+		#txtDsc {
+			    position: absolute;
+		    right: 50px;
+		    top: 150px;
+		    width: 300px;
+		}
+		#imgDsc{
+			width: 350px;
+		}
+		#menu li.hoverd {
+			height: 55px;
+			border: 1px solid;
+			background: url('img/bg2.png') repeat-x;
+		}
+		
+		.ui-dialog-title {
+  float:none !important;
+  display: block;
+  text-align: center;
+}
+.ui-dialog-titlebar-close {
+	display: none !important;
+}
+
+#popup {
+	display: none;
+	position: absolute;
+	left: 300px;
+	top: 200px;
+	z-index: 9999;
+	border: 1px solid;
+}
+
+		
+	</style>
+	
+	<script type="text/javascript" src="app/javascript/jquery.js"></script>
+	<script type="text/javascript" src="$MANAGER_WIDGET/Common/API/Widget.js"></script>
+	<script type="text/javascript" src="$MANAGER_WIDGET/Common/API/TVKeyValue.js"></script>
+	<script type='text/javascript' language='javascript' src="$MANAGER_WIDGET/Common/API/Plugin.js"></script>
+
+	
+	<object id="pluginObjectTVMW" border=0 classid="clsid:SAMSUNG-INFOLINK-TVMW" style="visibility:hidden; position:absolute; width: 0; height: 0; opacity: 0;" /></object>
+	<object id="pluginObjectNNavi" border=0 classid="clsid:SAMSUNG-INFOLINK-NNAVI" style="visibility:hidden; position:absolute; width: 0; height: 0; opacity: 0;" /></object>
+	<object id="pluginPlayer" border=0 classid="clsid:SAMSUNG-INFOLINK-PLAYER" style="visibility:hidden; position:absolute; width: 0; height: 0; opacity: 0;"></object>
+	<script type="text/javascript" src="app/javascript/howto.js"></script>
+	<script type="text/javascript" src="app/javascript/popup.js"></script>
+</head>
+<body  onload="Main.onLoad();" onunload="Main.onUnload();">
+<img src="img/helpbar2.png" alt=""  style="background: url('img/bg.png'); width: 960px; height: 28px; position: absolute; bottom: 0px; left: 0px" />
+<img id="popup" alt="Popup" />
+<a href="javascript:void(0);" id="anchor" onkeydown="Main.keyDown();"></a>
+	<div id="global">
+		<ul id="menu">
+			<li id="item0">
+				<img src="img/17.png" alt="" />
+			</li>
+			<li id="item1">
+				<img src="img/14.png" alt="" />
+			</li>
+			<li id="item2">
+				<img src="img/15.png" alt="" />
+			</li>
+			<li id="item3">
+				<img src="img/16.png" alt="" />
+			</li>
+			<li id="item4">
+				<img src="img/13.png" alt="" />
+			</li>
+			<li id="item5">
+				<img src="img/12.png" alt="" />
+			</li>
+		</ul>
+		<div><img id="imgDsc" alt="Howto" /> </div>
+		<div id="txtDsc"></div>
+	</div>
+</body>
+</html>
